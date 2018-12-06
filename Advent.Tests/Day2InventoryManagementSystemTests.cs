@@ -19,7 +19,7 @@ namespace Advent.Tests
         public void ChecksumFunctionTest2()
         {
             var result = Day2InventoryManagementSystem.ChecksumFunction(_inputs2);
-            //Assert.AreEqual(result, 12);
+            Assert.AreEqual(result, 6370);
             Console.WriteLine($"Checksum: {result}");
         }
 
@@ -35,6 +35,7 @@ namespace Advent.Tests
                       // 3 * 4 == 12
         };
 
+        private List<string> _partTwo;
 
         private List<string> _inputs2 = new List<string>
         {

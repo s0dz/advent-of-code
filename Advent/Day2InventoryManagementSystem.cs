@@ -3,11 +3,11 @@ using System.Linq;
 
 namespace Advent
 {
+    /*
+     * https://adventofcode.com/2018/day/2
+     */
     public class Day2InventoryManagementSystem
     {
-        /*
-         * https://adventofcode.com/2018/day/2
-         */
         // https://en.wikipedia.org/wiki/Checksum
         public static int ChecksumFunction(List<string> inputs)
         {
@@ -27,6 +27,12 @@ namespace Advent
             }
 
             return twoCount * threeCount;
+        }
+
+        // TODO: https://adventofcode.com/2018/day/2#part2
+        public static string FindCommonLetters(List<string> inputs)
+        {
+            return null;
         }
     }
 }
