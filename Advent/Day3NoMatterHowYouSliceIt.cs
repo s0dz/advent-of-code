@@ -64,14 +64,13 @@ namespace Advent
             return claimIds.Except(overlappingClaimIds);
         }
 
-        // TODO: Move this to a utility class?
         public static List<Claim> ReadAndMapInput(string filename)
         {
-            string line;
             List<Claim> claims = new List<Claim>();
 
-            System.IO.StreamReader file = new System.IO.StreamReader($"InputFiles/{filename}");
-            while ((line = file.ReadLine()) != null)
+            var lines = AdventUtility.ReadInput(filename);
+
+            foreach (var line in lines)
             {
                 string[] words = line.Split(' ');
 
@@ -92,7 +91,6 @@ namespace Advent
                     Height = Convert.ToInt32(height)
                 });
             }
-            file.Close();
 
             return claims;
         }
